@@ -1,0 +1,4 @@
+name: vendure
+recipe: platformsh
+config:
+  id: 3bobr3ztrfsti
