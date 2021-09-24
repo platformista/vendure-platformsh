@@ -29,9 +29,9 @@ web:
 disk: 4000
 
 mounts:
-  'data':
+  'vendure/data':
     source: local
-    source_path: data
+    source_path: vendure/data
 
 
 # The hooks executed at various points in the lifecycle of the application.
