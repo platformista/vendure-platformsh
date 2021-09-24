@@ -3,7 +3,7 @@ import {
     DefaultJobQueuePlugin,
     DefaultSearchPlugin,
     VendureConfig,
-} from '@vendure/core'; 
+} from '@vendure/core';
 import { defaultEmailHandlers, EmailPlugin } from '@vendure/email-plugin';
 import { AssetServerPlugin } from '@vendure/asset-server-plugin';
 import { AdminUiPlugin } from '@vendure/admin-ui-plugin';
@@ -11,7 +11,7 @@ import path from 'path';
 
 export const config: VendureConfig = {
     apiOptions: {
-        port: 3000,
+        port: process.env.PORT,
         adminApiPath: 'admin-api',
         adminApiPlayground: {
             settings: {

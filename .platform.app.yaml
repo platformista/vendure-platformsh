@@ -32,18 +32,6 @@ mounts:
   'data':
     source: local
     source_path: data
-  'logs':
-    source: local
-    source_path: logs
-  'repo':
-    source: local
-    source_path: repo
-  'export':
-    source: local
-    source_path: repo
-  'config':
-    source: local
-    source_path: config
 
 
 # The hooks executed at various points in the lifecycle of the application.
