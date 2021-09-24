@@ -37,7 +37,7 @@ export const config: VendureConfig = {
         type: 'better-sqlite3',
         synchronize: true, // turn this off for production
         logging: false,
-        database: path.join(__dirname, '../vendure.sqlite'),
+        database: path.join(__dirname, '../data/vendure.sqlite'),
         migrations: [path.join(__dirname, '../migrations/*.ts')],
     },
     paymentOptions: {
