@@ -9,6 +9,21 @@ name: app
 # The runtime the application uses.
 type: nodejs:16
 
+build:
+  flavor: none
+
+# The hooks executed at various points in the lifecycle of the application.
+hooks:
+  build: |
+    set -e
+    cd vendure
+    npm install
+    npm run build
+  deploy: |
+    set -e
+    mkdir vendure/static/email/templates/partials
+    ts-node vendure/platformsh-helpers/index.ts
+
 # The relationships of the application with services or other applications.
 #
 # The left-hand side is the name of the relationship as it will be exposed
@@ -45,14 +60,7 @@ mounts:
     source: local
     source_path: vendure/static/email/templates
 
-# The hooks executed at various points in the lifecycle of the application.
-hooks:
-  build: |
-    set -e
-    sh .platform.build.sh
-  deploy: |
-    set -e
-    sh .platform.deploy.sh
+
 
 #source:
 #  operations:

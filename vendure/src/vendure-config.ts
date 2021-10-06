@@ -37,7 +37,7 @@ export const config: VendureConfig = {
         type: 'postgres',
         host: 'database.internal',
         port: 5432,
-        synchronize: true,
+        synchronize: false,
         username: 'main',
         password: 'main',
         database: 'main',
