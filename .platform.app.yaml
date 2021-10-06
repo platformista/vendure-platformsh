@@ -32,6 +32,9 @@ mounts:
   'vendure/data':
     source: local
     source_path: vendure/data
+  'vendure/config':
+    source: local
+    source_path: vendure/config
   'vendure/static/assets':
     source: local
     source_path: vendure/static/assets
