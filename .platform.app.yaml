@@ -22,7 +22,8 @@ hooks:
   deploy: |
     set -e
     mkdir vendure/static/email/templates/partials
-    ts-node vendure/platformsh-helpers/index.ts
+    cd vendure
+    npm run deploy
 
 # The relationships of the application with services or other applications.
 #
