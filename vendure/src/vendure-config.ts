@@ -68,9 +68,5 @@ export const config: VendureConfig = {
                 changeEmailAddressUrl: 'http://localhost:8080/verify-email-address-change'
             },
         }),
-        AdminUiPlugin.init({
-            route: 'admin',
-            port: 3002,
-        }),
     ],
 };
