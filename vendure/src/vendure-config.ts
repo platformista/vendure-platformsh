@@ -34,11 +34,14 @@ export const config: VendureConfig = {
         },
     },
     dbConnectionOptions: {
-        type: 'better-sqlite3',
-        synchronize: true, // turn this off for production
-        logging: false,
-        database: path.join(__dirname, '../data/vendure.sqlite'),
-        migrations: [path.join(__dirname, '../migrations/*.ts')],
+        type: 'postgres',
+        host: 'database.internal',
+        port: 5432,
+        synchronize: false,
+        username: 'main',
+        password: 'main',
+        database: 'main',
+        migrations: [path.join(__dirname, 'migrations/*.ts')],
     },
     paymentOptions: {
         paymentMethodHandlers: [dummyPaymentHandler],

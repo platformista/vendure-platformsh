@@ -26,7 +26,7 @@ web:
       npm run start
 
 # The size of the persistent disk of the application (in MB).
-disk: 4000
+disk: 1024
 
 mounts:
   'vendure/data':
