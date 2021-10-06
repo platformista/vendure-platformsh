@@ -35,7 +35,12 @@ mounts:
   'vendure/static/assets':
     source: local
     source_path: vendure/static/assets
-
+  'vendure/static/email/test-emails':
+    source: local
+    source_path: vendure/static/email/test-emails
+  'vendure/static/email/templates':
+    source: local
+    source_path: vendure/static/email/templates
 
 # The hooks executed at various points in the lifecycle of the application.
 hooks:
